@@ -1,2 +1,3 @@
-rosewood
+Rosewood
 ========
+*A photographers website
