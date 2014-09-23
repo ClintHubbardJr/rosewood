@@ -1,3 +1,3 @@
 Rosewood
 ========
-*A photographers website
+A photographers website
