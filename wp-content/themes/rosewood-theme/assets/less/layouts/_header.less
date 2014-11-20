@@ -1,1 +1,32 @@
-.banner { }
+.banner {
+
+  .navbar-brand {
+    background: url('../img/logo-white.png') no-repeat transparent;
+    background-size: 100%;
+    width: 100px;
+    height: 78px;
+    margin: 1ex .75em;
+    text-indent: -9999px;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        padding: @nav-link-padding;
+        text-align: center;
+      }
+      @media (min-width: @screen-md-min) {
+        @nav-link-padding: 5ex 2em;
+        > a {
+          padding: @nav-link-padding;
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    margin-top: 4ex;
+    .icon-bar {
+      width: @navbar-default-toggle-icon-bar-width;
+      height: @navbar-default-toggle-icon-bar-height;
+    }
+  }
+}
