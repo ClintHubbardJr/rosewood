@@ -142,7 +142,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.css',
@@ -153,7 +153,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
   // Register tasks
   grunt.registerTask('default', [
     'dev'
@@ -162,7 +161,8 @@ module.exports = function(grunt) {
     'jshint',
     'less:dev',
     'autoprefixer:dev',
-    'concat'
+    'concat',
+    'watch'
   ]);
   grunt.registerTask('build', [
     'jshint',

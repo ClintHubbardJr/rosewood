@@ -21,6 +21,7 @@ $roots_includes = array(
   'lib/gallery.php',         // Custom [gallery] modifications
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
+  'lib/menu.php',            // New Menu Functionz
   'lib/extras.php',          // Custom functions
 );
 

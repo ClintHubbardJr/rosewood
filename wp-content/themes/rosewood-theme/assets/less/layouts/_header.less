@@ -1,32 +1,66 @@
 .banner {
-
+  border: 0;
   .navbar-brand {
-    background: url('../img/logo-white.png') no-repeat transparent;
+    background: url('../img/logo-white.png') no-repeat transparent center center;
     background-size: 100%;
-    width: 100px;
-    height: 78px;
+    width: 85px;
+    height: 63px;
     margin: 1ex .75em;
+    padding: @nav-link-padding / 2;
     text-indent: -9999px;
   }
-  .navbar-nav {
-    > li {
-      > a {
-        padding: @nav-link-padding;
-        text-align: center;
-      }
-      @media (min-width: @screen-md-min) {
-        @nav-link-padding: 5ex 2em;
+  > nav {
+    position: relative;
+    text-align: center;
+    .navbar-brand-2 {
+      position: absolute;
+      top: -46px;
+      left: 50%;
+      width: 220px;
+      height: 220px;
+      padding: 0;
+      margin-left: -100px;
+      background: url('../img/logo-white.png') no-repeat center 70%,
+                  linear-gradient(
+                    180deg,
+                    transparent 0%,
+                    transparent 60%,
+                    @navbar-default-bg 60%,
+                    @navbar-default-bg 100%
+                  ) no-repeat;
+      background-size: 80%, contain;
+      border-radius: 108px;
+      text-indent: -9999px;
+    }
+    .navbar-nav {
+      display: inline-block;
+      overflow: hidden;
+      float: none;
+      > li {
         > a {
-          padding: @nav-link-padding;
+          padding: @nav-link-padding / 4;
+          text-align: center;
+        }
+        @media (min-width: @screen-md-min) {
+          > a {
+            padding: @nav-link-padding * 1.5 @nav-link-padding;
+          }
         }
       }
+      &#menu-primary-navigation {
+        margin-left: 6em;
+      }
+      &#menu-primary-navigation-right {
+        margin-left: 15em;
+      }
+    }
+    .navbar-toggle {
+      margin-top: 3ex;
+      .icon-bar {
+        width: @navbar-default-toggle-icon-bar-width;
+        height: @navbar-default-toggle-icon-bar-height;
+      }
     }
   }
-  .navbar-toggle {
-    margin-top: 4ex;
-    .icon-bar {
-      width: @navbar-default-toggle-icon-bar-width;
-      height: @navbar-default-toggle-icon-bar-height;
-    }
-  }
+
 }
