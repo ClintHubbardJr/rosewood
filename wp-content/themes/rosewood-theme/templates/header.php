@@ -10,17 +10,20 @@
   </div>
 
   <nav class="collapse navbar-collapse" role="navigation">
-
-    <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-      endif;
-    ?>
+    <div class="nav-left">
+      <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+        endif;
+      ?>
+    </div>
     <a class="navbar-brand-2 hidden-xs" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <?php
-      if (has_nav_menu('primary_navigation_right')) :
-        wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav'));
-      endif;
-    ?>
+    <div class="nav-right">
+      <?php
+        if (has_nav_menu('primary_navigation_right')) :
+          wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav'));
+        endif;
+      ?>
+    </div>
   </nav>
 </header>

@@ -14,12 +14,12 @@
     text-align: center;
     .navbar-brand-2 {
       position: absolute;
-      top: -46px;
+      top: -51px;
       left: 50%;
       width: 220px;
       height: 220px;
       padding: 0;
-      margin-left: -100px;
+      margin-left: -110px;
       background: url('../img/logo-white.png') no-repeat center 70%,
                   linear-gradient(
                     180deg,
@@ -32,14 +32,45 @@
       border-radius: 108px;
       text-indent: -9999px;
     }
+    .nav-left {
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+    .nav-right {
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+    @media (min-width: @screen-sm-min) {
+      .nav-left {
+        float: left;
+        width: 50vw;
+        padding-right: 8em;
+        // margin-left: 6em;
+        // width: auto;
+      }
+      .nav-right {
+        float: left;
+        width: 50vw;
+        padding-left: 8em;
+        // margin-left: 15em;
+        // width: auto;
+      }
+    }
     .navbar-nav {
-      display: inline-block;
-      overflow: hidden;
-      float: none;
+      display: block;
+      // overflow: hidden;
+      // float: none;
       > li {
         > a {
           padding: @nav-link-padding / 4;
           text-align: center;
+        }
+        @media (min-width: @screen-sm-min) {
+          > a {
+            padding: @nav-link-padding * 1.5 @nav-link-padding / 2.25;
+          }
         }
         @media (min-width: @screen-md-min) {
           > a {
@@ -48,12 +79,30 @@
         }
       }
       &#menu-primary-navigation {
-        margin-left: 6em;
+        margin-bottom: 0;
+        margin-left: 0;
+        width: 100%;
       }
       &#menu-primary-navigation-right {
-        margin-left: 15em;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
       }
+      @media (min-width: @screen-sm-min) {
+        &#menu-primary-navigation {
+          float: right;
+          width: auto;
+        }
+        &#menu-primary-navigation-right {
+          float: left;
+          width: auto;
+        }
+      }
+
     }
+
+  }
+  .navbar-header {
     .navbar-toggle {
       margin-top: 3ex;
       .icon-bar {

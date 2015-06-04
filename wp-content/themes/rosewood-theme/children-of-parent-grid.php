@@ -11,7 +11,7 @@ Template Name: Children of Parent Grid
         $image = $image[0];
       endif; ?>
     <div class="third" style="background-image: url('<?php echo $image; ?>')">
-      <a href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>">
+      <a href="<?php echo get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>">
         <p class="h1"><?php echo $pageChild->post_title; ?></p>
       </a>
     </div>

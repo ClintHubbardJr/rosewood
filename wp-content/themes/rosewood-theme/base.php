@@ -12,13 +12,10 @@
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap" role="document">
-    <div class="content">
-      <main class="main" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+
+  <main id="main" role="main">
+    <?php include roots_template_path(); ?>
+  </main><!-- /.main -->
 
   <?php get_template_part('templates/footer'); ?>
 
