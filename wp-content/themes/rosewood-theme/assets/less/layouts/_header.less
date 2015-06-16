@@ -1,5 +1,8 @@
 .banner {
   border: 0;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   .navbar-brand {
     background: url('../img/logo-white.png') no-repeat transparent center center;
     background-size: 100%;
@@ -64,6 +67,9 @@
       // float: none;
       > li {
         > a {
+          font-family: @headings-font-family;
+          font-size: 1.25em;
+          text-transform: uppercase;
           padding: @nav-link-padding / 4;
           text-align: center;
         }

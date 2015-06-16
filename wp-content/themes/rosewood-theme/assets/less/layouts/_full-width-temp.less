@@ -1,0 +1,55 @@
+.page-template-full-width-temp {
+  #main {
+    > .backdrop {
+      > .container > .row {
+        > section {
+
+          p {
+            text-align: left;
+            margin-bottom: 1.25vh;
+            > a {
+              display: inline-block;
+              margin-right: 1em;
+              &::before {
+                font-size: 2em;
+                color: @white-transparent-icons;
+              }
+            }
+          }
+        }
+        .page-header {
+          visibility: visible;
+        }
+      }
+    }
+
+  }
+
+  &.page-id-48 {
+    #main {
+      > .backdrop {
+        > .container > .row {
+          .page-header {
+            visibility: hidden;
+          }
+
+        }
+      }
+
+    }
+  }
+  &.page-id-42 {
+    #main {
+      > .backdrop {
+        > .container > .row {
+          .page-header {
+            display: none;
+          }
+
+        }
+      }
+
+    }
+  }
+
+}

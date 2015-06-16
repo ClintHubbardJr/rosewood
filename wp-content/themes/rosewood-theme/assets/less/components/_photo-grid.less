@@ -3,33 +3,37 @@
   height: 100%;
   > * {
     > a {
+      position: relative;
       display: block;
       width: 100%;
       height: 100%;
       text-align: center;
-      padding-top: 4vh;
       text-decoration: none;
       > img {
         width: 100%;
       }
 
       > p {
+        position: absolute;
+        bottom: 1vh;
+        right: 1vw;
         color: white;
-        font-family: 'Lobster', cursive;
-        font-size: 10vw;
+        font-family: @headings-font-family;
+        font-size: 12vw;
         text-shadow: 3px 0px 2px #000;
       }
     }
   }
   > .third {
     width: 100vw;
-    height: 56vh;
+    height: 52vh;
     max-height: 180px;
     float: left;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 5px solid black;
   }
 
   @media (min-width: @screen-sm-min) {
@@ -38,49 +42,31 @@
       height: 50vh;
       max-height: 100%;
       > a {
+        position: relative;
         display: block;
         width: 100%;
         height: 100%;
         text-align: center;
-        padding-top: 20vh;
         text-decoration: none;
+        background-color: @transparent-default-active-bg;
+        &:hover {
+          background-color: @brand-primary-active;
+        }
         > img {
           width: 100%;
         }
 
         > p {
+          position: absolute;
+          bottom: 1vh;
+          right: 1vw;
           color: white;
-          font-family: 'Lobster', cursive;
-          font-size: 3vw;
+          font-family: @headings-font-family;
+          font-size: 3.5vw;
           text-shadow: 3px 0px 2px #000;
         }
       }
     }
   }
-
-  // @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-  //   > .third {
-  //     height: 1024px / 2;
-  //   }
-  // }
-
-  // /**
-  //  * iPad with landscape orientation.
-  //  */
-  // @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-  //   > .third {
-  //     height: 768px / 2;
-  //   }
-  // }
-
-  // /**
-  //  * iPhone 5
-  //  * You can also target devices with aspect ratio.
-  //  */
-  // @media screen and (device-aspect-ratio: 40/71) {
-  //   > .third {
-  //     height: 500px / 2;
-  //   }
-  // }
 
 }

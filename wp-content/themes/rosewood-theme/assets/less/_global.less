@@ -1,18 +1,105 @@
 body {
-  padding-bottom: 70px;
+  color: white;
+  background-color: black;
+
   &.page-template-children-of-parent-grid {
     padding-bottom: 0px;
   }
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #main {
+  > .backdrop {
+    float: left;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: @transparent-default-active-bg;
+    > .container {
+      margin-top: 13vh;
+    }
+  }
   > .container {
-    margin-top: 25vh;
+    margin-top: 13vh;
   }
 }
 // Resets the page header
 .page-header {
   padding-bottom: 0;
-  margin: 0;
+  margin: 0 0 3% 0;
   border-bottom: 0;
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fb:before {
+  content: "\e600";
+}
+.icon-mail:before {
+  content: "\e601";
+}
+
+main .wpcf7 {
+  margin-top: @line-height-computed;
+  > form {
+    > .row {
+
+      p {
+        font-family: @headings-font-family;
+        font-size: @font-size-h4;
+        text-transform: uppercase;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        background-color: @white-transparent;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 3%;
+        margin-bottom: 3%;
+      }
+      input[type="submit"] {
+        border: none;
+        border-radius: 0;
+        padding: 3% 6%;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
