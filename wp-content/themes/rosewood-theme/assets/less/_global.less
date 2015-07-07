@@ -20,10 +20,10 @@ h1, h2, h3, h4,
 }
 
 #main {
-  > .backdrop {
+  .backdrop {
     float: left;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     background-color: @transparent-default-active-bg;
     > .container {
       margin-top: 13vh;
@@ -99,6 +99,34 @@ main .wpcf7 {
         border-radius: 0;
         padding: 3% 6%;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.page-template-left-text-overlay {
+  #main {
+    > .overlay {
+      float: left;
+      width: auto;
+      max-width: 420px;
+      margin-top: 80px;
+      padding: 0;
+      > .backdrop {
+        height: auto;
+        .page-header {
+          visibility: visible;
+        }
+        p, h2 {
+          margin-left: @grid-gutter-width / 2;
+          margin-right: @grid-gutter-width / 2;
+        }
+        p {
+          font-size: @font-size-h4;
+        }
+        h2 {
+          margin-bottom: 20px;
+        }
       }
     }
   }

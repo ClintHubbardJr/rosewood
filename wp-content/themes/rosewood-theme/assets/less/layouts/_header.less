@@ -35,6 +35,9 @@
       border-radius: 108px;
       text-indent: -9999px;
     }
+    @-moz-document url-prefix() {
+      .navbar-brand-2 { top: -52px !important; }
+    }
     .nav-left {
       margin-bottom: 0;
       margin-left: 0;
@@ -45,17 +48,20 @@
       margin-left: 0;
       width: 100%;
     }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      .navbar-brand-2 { top: -51px; }
+    }
     @media (min-width: @screen-sm-min) {
       .nav-left {
         float: left;
-        width: 50vw;
+        width: 50%;
         padding-right: 8em;
         // margin-left: 6em;
         // width: auto;
       }
       .nav-right {
         float: left;
-        width: 50vw;
+        width: 50%;
         padding-left: 8em;
         // margin-left: 15em;
         // width: auto;
